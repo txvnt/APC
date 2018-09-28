@@ -1,17 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-	//POR ARREGLAR +- 1 PAGINA
-	int x,y,z; 
+	double x,y,z; 
 	cin >> x >> y >> z;
-	int r = x/(z-y + 1);
-	int aux = r;
-	int cont = 1;
-	while(aux > 9){
+	double r = x/(z - y); 
+	double aux = r;
+	int cont = 0;
+	while(aux >= 1){
 		cont++;
 		aux /= 10;
 	}
 	cont = (cont*2)+1;
-	cout << x/(z-(y+cont));
+	double newPages = x/(z-(y+cont));
+	int result = ceil(newPages);
+	cout << result;
 	return 0;
 }
